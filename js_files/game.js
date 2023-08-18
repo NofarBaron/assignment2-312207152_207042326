@@ -23,14 +23,9 @@ $(document).ready(function() {
 
 
   $("#home-menu-btn").click(function(){
-    // ClearAllIntervals();
     if (audio != null){
       audio.pause();
     }
-    // if (loggedInUser != null){
-    //   $("#welcome-login-btn").hide();
-    //   $("#welcome-registration-btn").hide();
-    // }
     $("#player-history-section").hide();
     $("#welcome-section-notLoggedIn").show();
     $("#play-section").hide();
@@ -55,7 +50,6 @@ $(document).ready(function() {
 	});
 
 	$("#login-menu-btn").click(function(){
-		// ClearAllIntervals();
 		if (audio != null){
 			audio.pause();
 		}
@@ -69,14 +63,9 @@ $(document).ready(function() {
 	});
 
 	$("#welcome-login-btn").click(function(){
-		// ClearAllIntervals();
 		if (audio != null){
 			audio.pause();
 		}
-		// if (loggedInUser != null){
-		// 	$("#welcome-login-btn").hide();
-		// 	$("#welcome-registration-btn").hide();
-		// }
 		$("#welcome-section-notLoggedIn").hide();
 		$("#play-section").hide();
 		$("#register-section").hide();
@@ -87,7 +76,6 @@ $(document).ready(function() {
 	});
 
 	$("#welcome-registration-btn").click(function(){
-		// ClearAllIntervals();
 		if (audio != null){
 			audio.pause();
 		}
@@ -300,10 +288,7 @@ $(document).ready(function () {
 		},
 
   });
-		// submitHandler: function(){
-		// 	registrationUser();
-		// 	alert(users.length);
-		// }
+		
 });
 
 function registrationUser(){
@@ -603,24 +588,6 @@ const enemyHeight = 20;
 var enemySpeed = 2;
 
 
-// function createRockets() {
-  
-//   for (let i = 0; i < 20; i++) {
-//     const row = Math.floor(i / 5);
-//     const col = i % 5;
-//     rockets.push({
-//       x:0,
-//       y: 0,
-//       width: rocket.width,
-//       height: rocket.height,
-//       image: rocket.image,
-//       speed: rocket.speed,
-//     });
-//   }
-// }
-
-
-
 // Create enemies
 function createEnemies() {
   
@@ -891,26 +858,6 @@ if (rocketObj!=null){
 
 // Handle keyboard input
  keys = {};
-// document.addEventListener('Space', (event) => {
-//   const rocket = document.getElementById('rocket');
-//   const startY = player.y;
-//   const endY = startY - 200;
-//   let currentPosition = startY;
-
-//   const animateRocket = setInterval(() => {
-//     if (currentPosition <= endY) {
-//       clearInterval(animateRocket);
-//     } else {
-//       currentPosition -= 10;
-//       rocket.style.top = player.x;
-//     }
-//   }, 10);
-//   keys[event.code] = true;
-// });
-// function restatGame()
-// {
-//   goto
-// }
   document.addEventListener('keydown', (event) => {
     keys[event.code] = true;
   });
@@ -925,9 +872,6 @@ if (rocketObj!=null){
       var tupleRes=[gameCounter,playerPoints]
       playerHistory.push(tupleRes);
       gameCounter++
-      // dic = {game_num:gameCounter.toString(), score:playerPoints.toString()};
-      // playerHistory.push(dic.show);
-      // playerHistory.push(playerPoints);
       console.log("Results are" + playerHistory)
       rocketObj=null
       enemies=null;
@@ -954,18 +898,10 @@ if (rocketObj!=null){
       startGame();
     
       if(x==3){
-        
             alert("You can do better!");
-            
-            // clearTimeout(timer);
-        
-            // alert("You can do better");
+                    
       }
-        // return;
-        // // var rocketObj = new rocketo();
-        // ctx.clearRect(0, 0, canvas.width, canvas.height);
-        // enemies=[];
-        // startGame();
+
     }
   }
 }
